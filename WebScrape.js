@@ -1,5 +1,4 @@
 const ExportedData = [];
-const goodPointers = [];
 const executeLookups = async (pointers) => {
     ExportedData.push(['Pointer', 'Property Code', 'Intercom Code', 'Front Entrance Code', 'LockBox Code', 'Boiler Room Access', 'Master Code', 'Lockbox Location 1', 'Lockbox Code 1', 'Lockbox Location 2', 'Lockbox Code 2', 'Lockbox Location 3', 'Lockbox Code 3', 'Notes']);
     for (pointer of pointers) {
@@ -34,7 +33,7 @@ const executeLookups = async (pointers) => {
 };
 
 exportToCsv = function (ExportedData) {
-    var fileName = ("Access Info.csv");
+    var fileName = ("Access.csv");
     var CsvString = "";
     ExportedData.forEach(function (RowItem, RowIndex) {
         RowItem.forEach(function (ColItem, ColIndex) {
